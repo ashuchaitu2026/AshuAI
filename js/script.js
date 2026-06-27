@@ -1,3 +1,6 @@
+// Import the shared Supabase client
+import { supabaseClient } from "./config.js";
+
 async function loadTrainingData() {
 
     const { data, error } = await supabaseClient
@@ -58,11 +61,3 @@ document.addEventListener("DOMContentLoaded", () => {
     loadTrainingData();
 
 });
-import {
-    supabaseClient,
-    auth,
-    provider,
-    signInWithPopup,
-    signOut,
-    onAuthStateChanged
-} from "./config.js";
