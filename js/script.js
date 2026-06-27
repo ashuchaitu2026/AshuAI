@@ -58,3 +58,11 @@ document.addEventListener("DOMContentLoaded", () => {
     loadTrainingData();
 
 });
+import {
+    supabaseClient,
+    auth,
+    provider,
+    signInWithPopup,
+    signOut,
+    onAuthStateChanged
+} from "./config.js";
