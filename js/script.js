@@ -1,5 +1,5 @@
 // Import the shared Supabase client
-import { supabaseClient } from "./config.js";
+import { supabaseClient } from "./Config.js";
 
 async function loadTrainingData() {
 
