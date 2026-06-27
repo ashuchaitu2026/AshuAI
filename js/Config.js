@@ -6,24 +6,63 @@ const supabaseClient = supabase.createClient(
     SUPABASE_URL,
     SUPABASE_KEY
 );
-// Import the functions you need from the SDKs you need
-import { initializeApp } from "firebase/app";
-import { getAnalytics } from "firebase/analytics";
-// TODO: Add SDKs for Firebase products that you want to use
-// https://firebase.google.com/docs/web/setup#available-libraries
+// =========================================
+// SUPABASE CONFIGURATION
+// =========================================
 
-// Your web app's Firebase configuration
-// For Firebase JS SDK v7.20.0 and later, measurementId is optional
+import { createClient } from "https://esm.sh/@supabase/supabase-js";
+
+export const SUPABASE_URL = "https://kaojyzzqsfmpxjjnbros.supabase.co";
+
+export const SUPABASE_KEY = "YOUR_SUPABASE_PUBLISHABLE_KEY";
+
+export const supabaseClient = createClient(
+    SUPABASE_URL,
+    SUPABASE_KEY
+);
+
+// =========================================
+// FIREBASE CONFIGURATION
+// =========================================
+
+import { initializeApp } from "https://www.gstatic.com/firebasejs/10.13.2/firebase-app.js";
+
+import {
+    getAuth,
+    GoogleAuthProvider,
+    signInWithPopup,
+    signOut,
+    onAuthStateChanged
+} from "https://www.gstatic.com/firebasejs/10.13.2/firebase-auth.js";
+
 const firebaseConfig = {
-  apiKey: "AIzaSyDato8H7RegmOVwDmdkFtgLgyRe1Y_sg6Q",
-  authDomain: "ashuai-481f3.firebaseapp.com",
-  projectId: "ashuai-481f3",
-  storageBucket: "ashuai-481f3.firebasestorage.app",
-  messagingSenderId: "239643358154",
-  appId: "1:239643358154:web:2a275d65b937a98a695533",
-  measurementId: "G-0DHZSH9B4V"
+
+    apiKey: "AIzaSyDato8H7RegmOVwDmdkFtgLgyRe1Y_sg6Q",
+
+    authDomain: "ashuai-481f3.firebaseapp.com",
+
+    projectId: "ashuai-481f3",
+
+    storageBucket: "ashuai-481f3.firebasestorage.app",
+
+    messagingSenderId: "239643358154",
+
+    appId: "1:239643358154:web:2a275d65b937a98a695533",
+
+    measurementId: "G-0DHZSH9B4V"
+
 };
 
-// Initialize Firebase
-const app = initializeApp(firebaseConfig);
-const analytics = getAnalytics(app);
+const firebaseApp = initializeApp(firebaseConfig);
+
+// Firebase Authentication
+
+export const auth = getAuth(firebaseApp);
+
+export const provider = new GoogleAuthProvider();
+
+export {
+    signInWithPopup,
+    signOut,
+    onAuthStateChanged
+};
