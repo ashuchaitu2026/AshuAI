@@ -1,58 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Welcome to GitHub Training from Web</title>
-
-    <link rel="stylesheet" href="css/style.css">
-</head>
-
-<body>
-
-<div id="header-container"></div>
 
     <meta charset="UTF-8">
 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
 
     <title>Welcome to GitHub Training from Web</title>
 
-    <link rel="stylesheet" href="css/style.css">
-
+    <link rel="stylesheet"
+          href="css/style.css">
 
 </head>
 
 <body>
 
-    <h1>Welcome to GitHub Training from Web</h1>
+    <!-- Shared Header -->
+    <div id="header-placeholder"></div>
 
-    <p>Learn GitHub, DevOps, Cloud and Modern Technologies</p>
+    <!-- Main Content -->
+    <div class="container">
 
-<div class="container">
+        <h2 class="section-title">
+            Available Training Programs
+        </h2>
 
-    <h2 class="section-title">
-        Available Training Programs
-    </h2>
+        <div id="training-list">
 
-    <div id="training-list">
-
-        <div class="loading">
-
-            Loading training data...
+            <div class="loading">
+                Loading training data...
+            </div>
 
         </div>
 
     </div>
 
-</div>
+    <!-- Shared Footer -->
+    <div id="footer-placeholder"></div>
 
+    <!-- Shared Header -->
+    <script type="module" src="js/header.js"></script>
 
-    © 2026 GitHub Training Portal
+    <!-- Home Page Logic -->
+    <script type="module" src="js/script.js"></script>
 
-
-<script type="module" src="js/header.js"></script>
-<script type="module" src="js/script.js"></script>
 </body>
 
 </html>
