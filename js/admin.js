@@ -12,7 +12,7 @@ const ADMIN_EMAIL = "ashuchaitu2026@gmail.com";
 document.addEventListener("DOMContentLoaded", () => {
 
     loadHeader();
-    loadFooter();
+ //   loadFooter();
 
     onAuthStateChanged(auth, async (user) => {
 
