@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Admin Dashboard</title>
+
+    <link rel="stylesheet"
+          href="css/style.css">
+
+</head>
+
+<body>
+
+    <!-- Shared Header -->
+    <div id="header-placeholder"></div>
+
+    <div class="container">
+
+        <h2 class="section-title">
+
+            Admin Dashboard
+
+        </h2>
+
+        <p>
+
+            Manage all training courses from this page.
+
+        </p>
+
+        <br>
+
+        <button id="show-add-form-btn"
+                class="btn">
+
+            Add New Course
+
+        </button>
+
+        <br><br>
+
+        <!-- Add Course Form -->
+
+        <div id="add-form"
+             style="display:none;">
+
+            <h3>Add New Course</h3>
+
+            <br>
+
+            <input
+                id="title"
+                type="text"
+                placeholder="Course Title"
+            >
+
+            <br><br>
+
+            <textarea
+                id="desc"
+                placeholder="Description"
+            ></textarea>
+
+            <br><br>
+
+            <input
+                id="tech"
+                type="text"
+                placeholder="Technology"
+            >
+
+            <br><br>
+
+            <input
+                id="link"
+                type="text"
+                placeholder="Training Link"
+            >
+
+            <br><br>
+
+            <button
+                id="save-course-btn"
+                class="btn">
+
+                Save Course
+
+            </button>
+
+            <button
+                id="cancel-add-btn"
+                class="btn">
+
+                Cancel
+
+            </button>
+
+        </div>
+
+        <hr>
+
+        <br>
+
+        <h3>
+
+            Existing Courses
+
+        </h3>
+
+        <br>
+
+        <div id="course-list">
+
+            Loading courses...
+
+        </div>
+
+    </div>
+
+    <!-- Shared Footer -->
+
+    <div id="footer-placeholder"></div>
+
+    <!-- Shared Header -->
+
+    <script type="module"
+            src="js/header.js"></script>
+
+    <!-- Admin Logic -->
+
+    <script type="module"
+            src="js/admin.js"></script>
+
+</body>
+
+</html>
