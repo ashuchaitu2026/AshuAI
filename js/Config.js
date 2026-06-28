@@ -1,33 +1,18 @@
-// =========================================
+// ===============================
 // SUPABASE CONFIGURATION
-// =========================================
+// ===============================
 
-import { createClient } from "https://esm.sh/@supabase/supabase-js";
+export const SUPABASE_URL =
+    "https://kaojyzzqsfmpxjjnbros.supabase.co";
 
-export const SUPABASE_URL = "https://kaojyzzqsfmpxjjnbros.supabase.co";
+export const SUPABASE_KEY =
+    "sb_publishable_j9BIi8baQKy4cMP4niiuEA_921Moqtp";
 
-export const SUPABASE_KEY = "sb_publishable_j9BIi8baQKy4cMP4niiuEA_921Moqtp";
-
-export const supabaseClient = createClient(
-    SUPABASE_URL,
-    SUPABASE_KEY
-);
-
-// =========================================
+// ===============================
 // FIREBASE CONFIGURATION
-// =========================================
+// ===============================
 
-import { initializeApp } from "https://www.gstatic.com/firebasejs/10.13.2/firebase-app.js";
-
-import {
-    getAuth,
-    GoogleAuthProvider,
-    signInWithPopup,
-    signOut,
-    onAuthStateChanged
-} from "https://www.gstatic.com/firebasejs/10.13.2/firebase-auth.js";
-
-const firebaseConfig = {
+export const firebaseConfig = {
 
     apiKey: "AIzaSyDato8H7RegmOVwDmdkFtgLgyRe1Y_sg6Q",
 
@@ -45,16 +30,3 @@ const firebaseConfig = {
 
 };
 
-const firebaseApp = initializeApp(firebaseConfig);
-
-// Firebase Authentication
-
-export const auth = getAuth(firebaseApp);
-
-export const provider = new GoogleAuthProvider();
-
-export {
-    signInWithPopup,
-    signOut,
-    onAuthStateChanged
-}; 
