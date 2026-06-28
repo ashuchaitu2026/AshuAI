@@ -1,10 +1,25 @@
 import {
+
     auth,
+
     provider,
+
     signInWithPopup,
+
     signOut,
+
     onAuthStateChanged
-} from "./Config.js";
+
+}
+from "./firebase.js";
+
+//import {
+   // auth,
+    //provider,
+    //signInWithPopup,
+    //signOut,
+    //onAuthStateChanged
+// } from "./Config.js";
 
 async function loadHeader() {
 
