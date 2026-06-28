@@ -27,7 +27,7 @@ async function loadHeader() {
 
     const html = await response.text();
 
-    document.getElementById("header-container").innerHTML = html;
+    document.getElementById("header-placeholder").innerHTML = html;
 
     const loginButton = document.getElementById("login-btn");
 
